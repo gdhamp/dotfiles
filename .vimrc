@@ -59,6 +59,8 @@ vno <up> <Nop>
 
 "Pathogen
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 
 "============== Color Settings ===============
 "color wombat256
