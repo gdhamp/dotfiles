@@ -1,6 +1,6 @@
 "============== General Settings ===============
 set dict=/usr/share/dict/words
-set cursorline
+"set cursorline
 set showcmd
 set ruler
 set incsearch
@@ -44,18 +44,18 @@ if version > 720
 	set undodir=~/vimundo/
 endif
 
-no <down> ddp
-no <left> <Nop>
-no <right> <Nop>
-no <up> ddkP
-ino <down> <Nop>
-ino <left> <Nop>
-ino <right> <Nop>
-ino <up> <Nop>
-vno <down> <Nop>
-vno <left> <Nop>
-vno <right> <Nop>
-vno <up> <Nop>
+"no <down> ddp
+"no <left> <Nop>
+"no <right> <Nop>
+"no <up> ddkP
+"ino <down> <Nop>
+"ino <left> <Nop>
+"ino <right> <Nop>
+"ino <up> <Nop>
+"vno <down> <Nop>
+"vno <left> <Nop>
+"vno <right> <Nop>
+"vno <up> <Nop>
 
 "Pathogen
 call pathogen#runtime_append_all_bundles()
@@ -67,7 +67,7 @@ call pathogen#helptags()
 "color xterm16
 "color railscasts
 "color molokai
-color skittles_dark
+"color skittles_dark
 
 
 "============== Custom scripts ===============
