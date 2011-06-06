@@ -1,5 +1,9 @@
 #!/bin/sh
+mv ~/.bash ~/.bash_orig
 ln -s ~/dotfiles/.bash ~/.bash
+mv ~/.bashrc ~/.bash_origrc
 ln -s ~/dotfiles/.bashrc ~/.bashrc
+mv ~/.vim ~/.vim_orig
 ln -s ~/dotfiles/.vim ~/.vim
+mv ~/.vimrc ~/.vimrc_orig
 ln -s ~/dotfiles/.vimrc ~/.vimrc
