@@ -1,20 +1,21 @@
 "============== General Settings ===============
 set dict=/usr/share/dict/words
-set cursorline
+"set cursorline
 set showcmd
 set ruler
 set incsearch
 set wildmenu
 syntax enable
 set synmaxcol=0
-set term=xterm-256color
-set display=uhex
+"set term=xterm-256color
 set shortmess=aAIsT
 set cmdheight=2
 set nowrap
 if &diff
 	set wrap
 endif
+
+set nocompatible
 
 set completeopt=menu
 set mousemodel=popup
@@ -27,7 +28,6 @@ set shiftwidth=4
 
 set linespace=0
 set history=1000
-set list listchars=tab:› ,trail:-,extends:>,precedes:<
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
 set ffs=unix
@@ -67,7 +67,7 @@ call pathogen#helptags()
 "color xterm16
 "color railscasts
 "color molokai
-color skittles_dark
+"color skittles_dark
 
 
 "============== Custom scripts ===============
