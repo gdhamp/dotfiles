@@ -22,6 +22,8 @@ set mousemodel=popup
 set backspace=2
 set number
 
+set splitright
+set splitbelow
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
@@ -44,18 +46,18 @@ if version > 720
 	set undodir=~/vimundo/
 endif
 
-no <down> ddp
-no <left> <Nop>
-no <right> <Nop>
-no <up> ddkP
-ino <down> <Nop>
-ino <left> <Nop>
-ino <right> <Nop>
-ino <up> <Nop>
-vno <down> <Nop>
-vno <left> <Nop>
-vno <right> <Nop>
-vno <up> <Nop>
+"no <down> ddp
+"no <left> <Nop>
+"no <right> <Nop>
+"no <up> ddkP
+"ino <down> <Nop>
+"ino <left> <Nop>
+"ino <right> <Nop>
+"ino <up> <Nop>
+"vno <down> <Nop>
+"vno <left> <Nop>
+"vno <right> <Nop>
+"vno <up> <Nop>
 
 "Pathogen
 call pathogen#runtime_append_all_bundles()
@@ -116,6 +118,13 @@ imap <C-S-Tab> <ESC>:tabprevious<CR>
 imap <C-Tab> <ESC>:tabnext<CR>
 noremap <F7> :set expandtab!<CR>
 
+" stuff for grep
+map gr :execute "vimgrep /" . expand("<cword>") . "/j *.c *.h" <Bar> cw<CR>
+"map gr :grep <cword> *.c <bar> cw <CR>
+"map gr :grep <cword> %:p:h/*<CR>
+"map gR :grep \b<cword>\b *<CR>
+"map GR :grep \b<cword>\b %:p:h/*<CR>
+
 "custom comma motion mapping
 nmap di, f,dT,
 nmap ci, f,cT,
@@ -150,6 +159,8 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 
 "============== Script configs ===============
+let g:netrw_altv = 1
+
 let VCSCommandSplit = 'vertical'
 
 let Tlist_Compact_Format = 0
